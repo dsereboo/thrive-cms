@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import DrugPage from "../components/DrugPage";
-import Catalogue from "../pages/Catalogue";
+// import Catalogue from "../pages/Catalogue";
 import Homepage from "../pages/Homepage";
 import Login from "../pages/Login";
-import Pharmacy from "../pages/Pharmacy";
+// import Pharmacy from "../pages/Pharmacy";
 import ProtectedRoute from "../components/ProtectedRoute";
 
 
@@ -13,8 +13,8 @@ const Router=()=>{
                 <ProtectedRoute exact path="/" component={Homepage}/>
                 <Route path="/login" component={Login}/>
                 <Route path="/drugs/:id" component={DrugPage}/>
-                <Route path="/catalogue" component={Catalogue}/>
-                <Route path="/pharmacy" component={Pharmacy}/>
+                {/* <Route path="/catalogue" component={Catalogue}/>
+                <Route path="/pharmacy" component={Pharmacy}/> */}
         </BrowserRouter>
     )
 }

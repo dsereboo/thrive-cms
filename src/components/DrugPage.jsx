@@ -49,6 +49,7 @@ const DrugPage=(props)=>{
                 <Col span={{md:1}} className="mt-5">
                 <ButtonGroup vertical>
                     <DeleteButton id={id}/>
+                    {/* <EditButton id={id}/> */}
                 </ButtonGroup> 
                 </Col>
             </Row>
