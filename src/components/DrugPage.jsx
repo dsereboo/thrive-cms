@@ -23,8 +23,6 @@ const DrugPage=(props)=>{
         setChosenDrug(drug[0])
     }
 
-    console.log(chosenDrug)
-
     useEffect(findDrug)
 
     return(
@@ -42,7 +40,6 @@ const DrugPage=(props)=>{
                      <hr/>
                     </div>
                     <div>
-                      
                         <p className="font-weight-bold text-nowrap">Available:</p><p>{chosenDrug.IsAvailable? "Yes":"No"}</p>
                         <p className="font-weight-bold">Qty: </p><p>{chosenDrug.Quantity}</p>
                         <p className="font-weight-bold">Last stocked</p><p>25/02/2021</p>
@@ -51,10 +48,7 @@ const DrugPage=(props)=>{
                 </Col>
                 <Col span={{md:1}} className="mt-5">
                 <ButtonGroup vertical>
-                    <EditButton />
-                    <LocateButton/>
-                    <OrderButton />
-                    <DeleteButton />
+                    <DeleteButton id={id}/>
                 </ButtonGroup> 
                 </Col>
             </Row>

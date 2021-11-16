@@ -17,3 +17,19 @@ export const getDrugs = () => {
         })
     };
   };
+
+
+  export const deleteDrug=(drugId)=>{
+    return(dispatch, state, {getFirestore})=>{
+        //async call to return firebase firestore
+        const db= getFirestore()
+        //delete data from firestire
+        db.collection('Branches').doc("Kwabenya").collection("Drugs").doc(drugId).delete()
+        .then(
+           
+        )
+        .catch(
+            ()=>{console.log("Error deleting expense record")}
+        )
+    }
+}
