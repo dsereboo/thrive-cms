@@ -1,0 +1,30 @@
+.illustration.col-md-7{
+    background-color:#FF7A00;
+}
+
+.login-button{
+    border-radius: 7px;
+    background-color: #FF7A00;
+    border-color: #FF7A00;
+}
+
+.login-button:hover{
+    background-color: #de6b02;
+    border-color: #de6b02;
+}
+
+.thrive-logo{
+    color: #fff;
+}
+
+.login-form{
+   margin-top: 10rem;
+}
+
+.description{
+    color:#fff;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
