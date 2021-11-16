@@ -1,5 +1,4 @@
 import React from "react"
-import { Spinner } from "react-bootstrap"
 import {connect} from "react-redux"
 import{Route, Redirect} from "react-router-dom"
 
