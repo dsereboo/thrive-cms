@@ -17,16 +17,16 @@ const Login = (props) => {
       props.signIn(details.email,details.password)
     }
 
-    // if(!props.auth.isLoaded){
-    //   return (<h1>Page is loading!...</h1>)
-    // }
+    if(!props.auth.isLoaded){
+      return (<h1>Page is loading!...</h1>)
+    }
   
   
-    // if( props.auth.isLoaded && !props.auth.isEmpty){
-    //   return (
-    //     <Redirect to="/" />
-    //   )
-    // }
+    if( props.auth.isLoaded && !props.auth.isEmpty){
+      return (
+        <Redirect to="/" />
+      )
+    }
 
 
   return (
