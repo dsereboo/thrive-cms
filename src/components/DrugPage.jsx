@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "../stylesheets/drugPage.css"
-import { Container, Row,Col,Button, ButtonGroup } from "react-bootstrap";
+import { Container, Row,Col, ButtonGroup } from "react-bootstrap";
 import { useParams } from "react-router";
 import image from "../assets/ibuprofen.jpeg"
 import Navigation from "./Navigation";
 import DeleteButton from "./DeleteButton";
-import LocateButton from "./LocateButton";
-import OrderButton from "./OrderButton";
-import EditButton from "./EditButton";
+// import LocateButton from "./LocateButton";
+// import OrderButton from "./OrderButton";
+// import EditButton from "./EditButton";
 import { connect } from "react-redux";
 
 

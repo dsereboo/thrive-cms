@@ -7,7 +7,7 @@ import DrugCard from "./DrugCard";
 const CardRows=(props)=>{
 
     useEffect(
-        ()=>{props.getDrugs()},[]
+        ()=>{props.getDrugs()},[props]
     )
 
     return (

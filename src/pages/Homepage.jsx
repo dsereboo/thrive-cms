@@ -1,11 +1,8 @@
 import React from "react"
-import { Container, Row } from "react-bootstrap"
+import { Container} from "react-bootstrap"
 import CardRows from "../components/CardRows"
-import DrugCard from "../components/DrugCard"
 import Navigation from "../components/Navigation"
 import SearchBar from "../components/SearchBar"
-import SecondarySearch from "../components/SecondarySearch"
-import UploadButton from "../components/UploadButton"
 
 const Homepage=()=>{
     return(

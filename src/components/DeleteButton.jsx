@@ -4,7 +4,7 @@ import {Button, Row} from "react-bootstrap"
 import{BsTrashFill} from "react-icons/bs"
 import { IconContext } from "react-icons"
 import DeleteModal from "./DeleteModal";
-import { useParams } from "react-router";
+
 
 const DeleteButton=(props)=>{
 

@@ -1,7 +1,5 @@
-import React,{useState} from "react"
+import React from "react"
 import { connect } from "react-redux"
-import{BsPersonCircle} from "react-icons/bs"
-import { IconContext } from "react-icons"
 import { Navbar,Nav,NavDropdown, Button, Dropdown, Container } from "react-bootstrap"
 import { signOut } from "../redux/actions/authActions"
 

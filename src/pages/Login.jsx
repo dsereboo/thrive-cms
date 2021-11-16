@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router";
 import "../stylesheets/login.css";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
-import image from "../assets/login.png";
 import { connect } from "react-redux";
 import { signIn } from "../redux/actions/authActions";
 
@@ -36,7 +34,7 @@ const Login = (props) => {
       <Row className="vh-100">
         <Col md={{ span: 7 }} className="illustration pt-5">
           <h1 className="thrive-logo">Thrive Logo</h1>
-          <img src="https://firebasestorage.googleapis.com/v0/b/thrive-cms-deff4.appspot.com/o/Drawkit-Vector-Illustration-Medical-18.png?alt=media&token=737a8137-ca6e-479e-8e49-25169410e0e0" className="img-fluid align-middle" />
+          <img src="https://firebasestorage.googleapis.com/v0/b/thrive-cms-deff4.appspot.com/o/Drawkit-Vector-Illustration-Medical-18.png?alt=media&token=737a8137-ca6e-479e-8e49-25169410e0e0" alt="medical illustration" className="img-fluid align-middle" />
           <div className="text-center">
             <p className="description">Your No. 1 Care partner</p>
           </div>
