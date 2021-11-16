@@ -1,15 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import DrugPage from "../components/DrugPage";
 import Catalogue from "../pages/Catalogue";
 import Homepage from "../pages/Homepage";
 import Login from "../pages/Login";
 import Pharmacy from "../pages/Pharmacy";
+import ProtectedRoute from "../components/ProtectedRoute";
 
 
 const Router=()=>{
     return(
         <BrowserRouter>
-                <Route exact path="/" component={Homepage}/>
+                <ProtectedRoute exact path="/" component={Homepage}/>
                 <Route path="/login" component={Login}/>
+                <Route path="/drugs/:id" component={DrugPage}/>
                 <Route path="/catalogue" component={Catalogue}/>
                 <Route path="/pharmacy" component={Pharmacy}/>
         </BrowserRouter>
