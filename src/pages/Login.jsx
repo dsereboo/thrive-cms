@@ -1,14 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
+import { Redirect } from "react-router";
 import "../stylesheets/login.css";
 import { Col, Container, Row, Form, Button } from "react-bootstrap";
 import image from "../assets/login.png";
+import { connect } from "react-redux";
+import { signIn } from "../redux/actions/authActions";
 
+const Login = (props) => {
 
-const Login = () => {
+    const [details,setDetails]=useState({email:"", password:""})
 
-    const handelClick=()=>{
-
+    const handleChange=(event)=>{
+      setDetails({...details, [event.target.name]:event.target.value})
     }
+
+    const handelClick=(event)=>{
+      event.preventDefault()
+      props.signIn(details.email,details.password)
+    }
+
+    // if(!props.auth.isLoaded){
+    //   return (<h1>Page is loading!...</h1>)
+    // }
+  
+  
+    // if( props.auth.isLoaded && !props.auth.isEmpty){
+    //   return (
+    //     <Redirect to="/" />
+    //   )
+    // }
 
 
   return (
@@ -26,7 +46,7 @@ const Login = () => {
           <h1>Thrive Pharmacy</h1>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" />
+              <Form.Control type="text" placeholder="Enter email" onChange={handleChange} name="email" />
               <Form.Text className="text-muted">
                 We'll never share your email with anyone else.
               </Form.Text>
@@ -34,9 +54,9 @@ const Login = () => {
 
             <Form.Group className="mb-4" controlId="formBasicPassword">
               <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
+              <Form.Control type="password" placeholder="Password" onChange={handleChange} name="password" />
             </Form.Group>
-            <Button onClick={handelClick} variant="primary" size="lg" className="w-100 login-button">
+            <Button onClick={handelClick} type="submit" variant="primary" size="lg" className="w-100 login-button">
                 Login
             </Button>
           </Form>
@@ -46,4 +66,12 @@ const Login = () => {
   );
 };
 
-export default Login;
+const mapDispatchToProps={
+    signIn:signIn
+}
+
+const mapStateToProps=(state)=>{
+   return{auth: state.firebase.auth}
+}
+
+export default  connect(mapStateToProps, mapDispatchToProps)(Login);
