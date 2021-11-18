@@ -12,7 +12,7 @@ const Router=()=>{
         <BrowserRouter>
                 <ProtectedRoute exact path="/" component={Homepage}/>
                 <Route path="/login" component={Login}/>
-                <Route path="/drugs/:id" component={DrugPage}/>
+                <ProtectedRoute path="/drugs/:id" component={DrugPage}/>
                 {/* <Route path="/catalogue" component={Catalogue}/>
                 <Route path="/pharmacy" component={Pharmacy}/> */}
         </BrowserRouter>

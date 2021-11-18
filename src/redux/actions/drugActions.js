@@ -7,10 +7,12 @@ export const getDrugs = () => {
       db.collection("Branches").doc("Kwabenya").collection("Drugs")
         .onSnapshot((response) => {
           let drugs = [];
+          let error=""
           response.forEach((item) => {
             drugs.push({ ...item.data(), id:item.id });
           });
           dispatch({ type: "GET_DRUGS", payload: drugs });
+          dispatch({type:"LOGIN_ERROR", payload:error})
         }, (err) => {
           //Log for an error
           console.log(err);

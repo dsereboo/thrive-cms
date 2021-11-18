@@ -1,4 +1,7 @@
-const initialState={drugs:[]}
+const initialState={
+    drugs:[],
+    error:{login:""},
+}
 
 const drugReducer=(state=initialState,action)=>{
     switch(action.type){
@@ -8,6 +11,8 @@ const drugReducer=(state=initialState,action)=>{
             let delID= action.payload
             let undeletedDrugs=state.drugs.filter((drug)=> drug.id!==delID )
             return{drugs: undeletedDrugs};
+        case "LOGIN_ERROR":
+            return {...state, error:{login: action.payload}}
         default:
             return state;
     }
