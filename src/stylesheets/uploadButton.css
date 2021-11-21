@@ -1,25 +1,15 @@
-.uploadBtn-row{
-    margin-left: 0rem;
-    margin-right: 0rem;
-   align-items: center;
-}
-
 .btn-float{
     border-radius: 0.9rem;
-    background-color: blueviolet;
+    width: 6rem;
+    height: 4.2rem;
     position: fixed;
     right: 5rem;
     bottom: 5rem;
-    border-color: blueviolet;
     justify-content: center;
     align-items: center;
-    padding: 0.8rem;
+    padding: 1.2rem;
 }
 
-.btn-float:hover{
-    background-color: rgb(92, 8, 170) ;
-    border-color: rgb(92, 8, 170) ;
-}
 
 .custom-text{
     margin-bottom: 0.5rem;

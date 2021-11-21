@@ -36,3 +36,27 @@ export const getDrugs = () => {
     }
 }
 
+
+export const addDrug=(drug)=>{
+  return(dispatch,state,{getFirestore})=>{
+      //async call to firebase to create project and return the result
+      const db=getFirestore() ;
+      //add data to firestore collection using the firestore object
+      db.collection('Branches').doc("Kwabenya").collection("Drugs").add(drug)
+      .then(
+          ()=>{
+              //When async call is successful dispatch redux action
+              //dispatch({type: "ADD_USER", payload: expense,});
+          }
+      )
+      .catch(
+          (err)=>{
+              //if async call fails, log to error log or some mechanism
+              console.log(err)
+          }
+      )
+      //asynchronous call to firebase to create users and return result
+     
+}
+}
+

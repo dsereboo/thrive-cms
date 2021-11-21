@@ -4,14 +4,16 @@ import { Container} from "react-bootstrap"
 import CardRows from "../components/CardRows"
 import Navigation from "../components/Navigation"
 import SearchBar from "../components/SearchBar"
+import FloatButton from "../components/FloatButton"
 
 const Homepage=()=>{
     return(
-        <Container fluid className="home-container vh-100" >
+        <Container fluid className="home-container" >
             <Navigation/>
             <SearchBar/>
             <CardRows/>
             {/* <SecondarySearch/> */}
+            <FloatButton/>
         </Container>
     )
 }
