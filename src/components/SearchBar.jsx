@@ -13,17 +13,14 @@ const SearchBar = () => {
                         <FormControl
                             size="lg"
                             id="inlineFormInputGroup"
-                            placeholder="Search"
+                            placeholder="Enter name of drug"
+                            className="form-outline"
                         />
-                        <div className="input-group-append">
-                            <Button variant="outline-secondary">
-                                <IconContext.Provider value={{ size: "1.3em" }}>
-                                    <BsFillCameraFill />
-                                </IconContext.Provider>
+                        <div className="input-group-append" style={{borderRadius:"0.7rem"}}>
+                            <Button variant="dark" size="lg" >
+                               Search
                             </Button>
-                            <Button variant="outline-secondary">
-                                <BsSearch />
-                            </Button>
+                            
                         </div>
                     </InputGroup>
                 </Form.Group>
