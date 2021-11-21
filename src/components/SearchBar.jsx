@@ -1,6 +1,4 @@
 import React from "react";
-import { IconContext } from "react-icons";
-import { BsFillCameraFill, BsSearch } from "react-icons/bs";
 import "../stylesheets/searchBar.css";
 import {Form,InputGroup,FormControl,Container,Button,} from "react-bootstrap";
 
