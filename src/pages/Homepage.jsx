@@ -3,14 +3,14 @@ import "../stylesheets/homepage.css"
 import { Container} from "react-bootstrap"
 import CardRows from "../components/CardRows"
 import Navigation from "../components/Navigation"
-import SearchBar from "../components/SearchBar"
 import FloatButton from "../components/FloatButton"
+import { connect } from "react-redux"
 
-const Homepage=()=>{
+const Homepage=(props)=>{
     return(
-        <Container fluid className="home-container" >
+        <Container fluid  >
             <Navigation/>
-            <SearchBar/>
+            {/* <SearchBar drugs={props.drugs}/> */}
             <CardRows/>
             {/* <SecondarySearch/> */}
             <FloatButton/>
@@ -18,4 +18,7 @@ const Homepage=()=>{
     )
 }
 
-export default Homepage
+const mapStateToProps=(state)=>{
+    return{drugs:state.drugs.drugs}
+}
+export default connect(mapStateToProps,null) (Homepage)

@@ -1,16 +1,17 @@
 .illustration.col-md-7{
-    background-color:#FF7A00;
+    background-color:#09566A;
+    ;
 }
 
 .login-button{
     border-radius: 7px;
-    background-color: #FF7A00;
-    border-color: #FF7A00;
+    background-color: #09566A;
+    border-color: #09566A;
 }
 
 .login-button:hover{
-    background-color: #de6b02;
-    border-color: #de6b02;
+    background-color: #09566A;
+    border-color: #09566A;
 }
 
 .thrive-logo{
