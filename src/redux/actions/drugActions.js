@@ -10,7 +10,7 @@ export const getDrugs = () => {
       .onSnapshot(
         (response) => {
           let drugs = [];
-          let error = "";
+          // let error = "";
           response.forEach((item) => {
             drugs.push({ ...item.data(), id: item.id });
           });

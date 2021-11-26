@@ -33,7 +33,7 @@ const FloatButton=(props)=>{
     );
 }
 
-const mapStateToProps=(state)=>{}
+// const mapStateToProps=(state)=>{}
 const mapDispatchToProps={
   addImage: addImage
 }
