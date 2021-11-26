@@ -76,7 +76,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(CardRows)
 
 const SearchBar = (props) => {
 
-  const drugs=props.drugs
+
 
   const options = {
       isCaseSensitive: false,

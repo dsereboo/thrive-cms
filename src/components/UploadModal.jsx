@@ -3,7 +3,6 @@ import {Modal} from "react-bootstrap"
 import AddDrug from "./AddDrug";
 
 const UploadModal=(props)=>{
-    //State to control display of modal
     return (
       <Modal {...props}>
         <Modal.Header >
