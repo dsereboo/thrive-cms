@@ -1,15 +1,13 @@
-import React,{ useState} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../stylesheets/drugCard.css"
 import { Card, Col,  } from "react-bootstrap"
 // import image from "../assets/ibuprofen.jpeg"
-import { getFirebase } from "react-redux-firebase";
+
 
 
 const DrugCard=({drug})=>{
 
-    const [image,setImage]=useState("")
-    const firebase=getFirebase()
 
     // useEffect(
     //     ()=>{
