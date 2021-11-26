@@ -4,3 +4,10 @@
   
     
 }
+
+.loader{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 9999999999;
+}

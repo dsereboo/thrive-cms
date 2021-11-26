@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "../stylesheets/drugPage.css"
 import { Container, Row,Col, ButtonGroup } from "react-bootstrap";
 import { useParams } from "react-router";
-import image from "../assets/ibuprofen.jpeg"
 import Navigation from "./Navigation";
 import DeleteButton from "./DeleteButton";
 // import LocateButton from "./LocateButton";
@@ -31,7 +30,7 @@ const DrugPage=(props)=>{
         <Container className="vh-100">
             <Row  >
                 <Col md={{span:5}} className="vh-100">
-                    <img src={image} className="img-fluid drug-image mt-5" alt="medicine identifier"/>
+                    <img src={chosenDrug.Image} className="img-fluid drug-image mt-5" alt="medicine identifier"/>
                 </Col>
                 <Col md={{span:5, }} className="mt-5">
                     <div>

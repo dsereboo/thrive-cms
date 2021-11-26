@@ -1,23 +1,30 @@
 import React from "react";
 import { Modal,Button } from "react-bootstrap";
 import { connect } from "react-redux";
-import { useHistory } from "react-router";
+import { useHistory, } from "react-router";
 import { deleteDrug } from "../redux/actions/drugActions";
 
 const DeleteModal=(props)=>{
 
     const history=useHistory()
+    // const location=useLocation()
+
+    // console.log(location)
     
     const handleDelete=()=>{
+      console.log(props.state)
         props.deletedrug(props.id)
         history.push("/")
+       
     }
+
+    
 
    
 
     return(
         <Modal {...props} centered>
-        <Modal.Header closeButton>
+        <Modal.Header >
           <Modal.Title>Modal heading</Modal.Title>
         </Modal.Header>
         <Modal.Body>Confirm removal from inventory? </Modal.Body>
@@ -37,4 +44,8 @@ const mapDispatchToProps={
     deletedrug:deleteDrug
 }
 
-export default connect(null, mapDispatchToProps)(DeleteModal)
+const mapStateToProps=(state)=>{
+  return{state:state}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DeleteModal)

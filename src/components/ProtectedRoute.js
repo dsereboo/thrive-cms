@@ -16,7 +16,9 @@ const ProtectedRoute=({component: Component,auth, ...otherProps})=>{
                 else if( !auth.isLoaded){
                     return(
                         <h1>Page loading</h1>
-                        // <Spinner animation="border" variant="primary" />
+                        // <div class="d-flex justify-content-center loader">
+                        // <Spinner animation="border" variant="primary" size="lg" />
+                        // </div>
                     )
                 }
                 else{
