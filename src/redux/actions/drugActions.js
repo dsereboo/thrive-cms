@@ -72,12 +72,13 @@ export const addDrug = (drug) => {
   };
 };
 
-function addLink(link){
-  return{
-    type:"GET_URL",
-    payload:link
-  }
-}
+// function addLink(link){
+//   // console.log(link, "dispatch")
+//   return{
+//     type:"GET_URL",
+//     payload:link,
+//   }
+// }
 
 export const addImage = (image) => {
   return (dispatch, state, { getFirebase }) => {
@@ -93,7 +94,10 @@ export const addImage = (image) => {
         imageRef.getDownloadURL().then((url) => {
           let link = url;
           console.log(link, "link");
-          dispatch(addLink(link));
+          dispatch({
+            type:"GET_URL",
+            payload:link,
+          });
         });
         // dispatch({ type: "GET_URL", payload:"Helllo" })
       });

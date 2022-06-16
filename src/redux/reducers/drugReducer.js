@@ -1,15 +1,13 @@
 const initialState={
     drugs:[],
     deleteComplete:false,
-    imageURL:{link:""}
+    imageURL:{link:"abracadabre"},
 }
 
 const drugReducer=(state=initialState,action)=>{
     switch(action.type){
         case "GET_DRUGS":
             return {drugs: action.payload}
-        case "ADD_FUSE":
-            return{fuse:action.payload}
         case "DELETE_DRUG":
             let delID= action.payload
             let undeletedDrugs=state.drugs.filter((drug)=> drug.id!==delID )

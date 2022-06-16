@@ -37,7 +37,6 @@ const AddDrug=(props)=>{
 
     const handleSubmit=async (event)=>{
         event.preventDefault()
-  
         props.addDrug(drug)
         console.log(props.state)
         
@@ -94,7 +93,7 @@ const AddDrug=(props)=>{
 
 
 const mapStateToProps=(state)=>{
-  return{state:state}
+  return{state:state.drugs}
 }
 
 const mapDispatchToProps={
